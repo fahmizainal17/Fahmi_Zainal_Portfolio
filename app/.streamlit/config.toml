@@ -1,0 +1,8 @@
+[theme]
+base="dark"
+
+[server]
+# The port where the server will listen for browser connections.
+# Don't use port 3000 which is reserved for internal development.
+# Default: 8501
+port=8990
