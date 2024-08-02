@@ -1,23 +1,23 @@
 import streamlit as st
-import openai
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
 # Load environment variables from .env file
 load_dotenv()
 
-# Set up the OpenAI API key
-openai.api_key = os.getenv('OPENAI_API_KEY')
+# Instantiate the OpenAI client
+client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
 def generate_response(prompt):
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
         ]
     )
-    message = response['choices'][0]['message']['content'].strip()
+    message = response.choices[0].message.content.strip()
     return message
 
 def main():
