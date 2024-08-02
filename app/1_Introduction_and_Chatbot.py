@@ -1,14 +1,7 @@
 import streamlit as st
-from transformers import pipeline
-import torch
+from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer
 
-# Verify PyTorch installation
-print("PyTorch version:", torch.__version__)
-
-# Load the pre-trained model for question-answering
-qa_pipeline = pipeline("question-answering", model="distilbert-base-uncased-distilled-squad")
-
-# Load the resume text
+# Resume text
 resume_text = """
 Muhammad Fahmi Bin Mohd Zainal
 Kuala Lumpur, Malaysia
@@ -135,19 +128,30 @@ Dashboard, Google API Sheets, Microsoft Excel VBA Macros
 • Development Tools: Visual Studio Code, GitHub Actions (CI/CD)
 """
 
-st.title("Resume Query Chatbot")
+# Load pre-trained model and tokenizer
+model_name = "gpt2"
+model = AutoModelForCausalLM.from_pretrained(model_name)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-st.write("You can ask questions about the resume.")
+# Initialize the pipeline
+chatbot = pipeline("text-generation", model=model, tokenizer=tokenizer)
 
-# User query
-user_query = st.text_input("Ask a question about the resume:")
+def chat_with_gpt2(user_input, context):
+    # Generate a response
+    response = chatbot(f"{context}\nUser: {user_input}\nAI:", max_length=150, num_return_sequences=1)
+    return response[0]['generated_text'].split("AI:")[1].strip()
 
-if user_query:
-    # Get the AI model's response
-    response = qa_pipeline(question=user_query, context=resume_text)
-    answer = response['answer']
-    st.write(f"Answer: {answer}")
+st.title("AI Chatbot - Get to Know Me")
 
-# Display the full resume text (optional)
-if st.checkbox("Show full resume text"):
-    st.write(resume_text)
+# Display resume text
+st.sidebar.title("Resume")
+st.sidebar.text(resume_text)
+
+if 'context' not in st.session_state:
+    st.session_state['context'] = resume_text
+
+user_input = st.text_input("You: ", "")
+if user_input:
+    ai_response = chat_with_gpt2(user_input, st.session_state['context'])
+    st.write(f"AI: {ai_response}")
+    st.session_state['context'] += f"\n\nUser: {user_input}\nAI: {ai_response}"
