@@ -6,8 +6,16 @@ import os
 # Load environment variables from .env file
 load_dotenv()
 
+# Check if the API key is loaded correctly
+api_key = os.getenv('OPENAI_API_KEY')
+if not api_key:
+    st.error("OpenAI API key not found. Please check your .env file.")
+else:
+    st.success("OpenAI API key loaded successfully.")
+    st.write(f"API Key: {api_key[:5]}...")  # Print part of the key for debugging
+
 # Instantiate the OpenAI client
-client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+client = OpenAI(api_key=api_key)
 
 def generate_response(prompt):
     response = client.chat.completions.create(
