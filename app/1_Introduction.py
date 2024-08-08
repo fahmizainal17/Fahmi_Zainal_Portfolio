@@ -4,8 +4,8 @@ import os
 from module.Introduction.resume_text import resume_text
 from streamlit_chat import message
 
-# Set up the page configuration
-st.set_page_config(page_title="🦙💬 Llama 2 Chatbot", page_icon=":robot:", layout="wide")
+# Set up the page configuration 
+st.set_page_config(page_title="🦙💬 Fahmi Zainal Llama 2 Chatbot", page_icon=":robot:", layout="wide")
 
 # Define the app title and sidebar for API token input
 with st.sidebar:
