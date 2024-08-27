@@ -98,9 +98,13 @@ def page_style():
 
         st.markdown("""
         ### Top Skills
+        - **Data Analysis,EDA,Modeling**
+        - **Power BI Dashboarding**
         - **Python (Programming Language)**
+        - **SQL**
+        - **REST APIs**
+        - **Databricks**
+        - **AWS Services(SageMaker,S3,ECS,EC2)**
         - **Google Cloud Platform (GCP)**
         - **TensorFlow**
-        - **REST APIs**
-        - **Azure Databricks**
         """)
