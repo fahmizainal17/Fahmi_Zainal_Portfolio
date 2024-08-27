@@ -89,7 +89,7 @@ def page_style():
 
     # Sidebar content
     with st.sidebar:
-        st.image("photos/Round_Profile_Photo.jpg", width=150)  # Adjust the image path and size as needed
+        st.image("photos/Round_Profile_Photo.jpg", width=150) 
 
         st.markdown("""
             ## Fahmi Zainal

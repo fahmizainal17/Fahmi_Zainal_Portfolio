@@ -1,7 +1,7 @@
 import streamlit as st
+from component import page_style
 
-# Set the page title and icon
-st.set_page_config(page_title="Materials", page_icon="📚", layout="wide")
+page_style()
 
 # Title for the Materials section
 st.title("Materials 📚")
