@@ -1,6 +1,6 @@
 streamlit==1.37.1
-replicate
-transformers
+transformers==4.44.0
 pillow==10.4.0
 requests==2.32.3
 typing_extensions==4.12.2
+streamlit-option-menu==0.3.13

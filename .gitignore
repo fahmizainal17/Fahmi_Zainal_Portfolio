@@ -162,5 +162,5 @@ cython_debug/
 #.idea/
 
 # Secrets
-app/.streamlit/secrets.toml
-app/.streamlit/config.toml
+.streamlit/secrets.toml
+.streamlit/config.toml
