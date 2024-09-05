@@ -81,15 +81,15 @@ def page_style():
             }
         </style>
     """
-    icon = Image.open('photos/Round_Profile_Photo.jpg')
-    st.set_page_config(page_title="Report Metrics Generator", page_icon=icon, layout="wide")
+    icon = Image.open('photos/Default_Pages/Round_Profile_Photo.jpg')
+    st.set_page_config(page_title="Fahmi Zainal", page_icon=icon, layout="wide")
     st.markdown(custom_style, unsafe_allow_html=True)
-    image = Image.open('photos/Background_Photo.png')
+    image = Image.open('photos/Default_Pages/Background_Photo.png')
     st.image(image)
 
     # Sidebar content
     with st.sidebar:
-        st.image("photos/Round_Profile_Photo.jpg", width=150) 
+        st.image("photos/Default_Pages/Round_Profile_Photo.jpg", width=150) 
 
         st.markdown("""
             ## Fahmi Zainal
@@ -98,13 +98,14 @@ def page_style():
 
         st.markdown("""
         ### Top Skills
-        - **Data Analysis,EDA,Modeling**
-        - **Power BI Dashboarding**
+        - **Data Analytics,EDA and Modelling**
+        - **Power BI and Tableau Dashboarding**
         - **Python (Programming Language)**
-        - **SQL**
-        - **REST APIs**
-        - **Databricks**
-        - **AWS Services(SageMaker,S3,ECS,EC2)**
-        - **Google Cloud Platform (GCP)**
-        - **TensorFlow**
+        - **SQL Querying and Modelling**
+        - **Machine Learning (ML)**
+        - **RESTful APIs Designing**
+        - **Databricks Cloud Services**
+        - **AWS(SageMaker,S3,ECS,EC2)**
+        - **Google Cloud Platform (GCP) APIs**
+        - **TensorFlow and Pytorch Framework**
         """)
