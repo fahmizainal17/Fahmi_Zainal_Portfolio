@@ -81,15 +81,15 @@ def page_style():
             }
         </style>
     """
-    icon = Image.open('photos/Default_Pages/Round_Profile_Photo.jpg')
+    icon = Image.open('photos/My_Photo/Round_Profile_Photo.jpg')
     st.set_page_config(page_title="Fahmi Zainal", page_icon=icon, layout="wide")
     st.markdown(custom_style, unsafe_allow_html=True)
-    image = Image.open('photos/Default_Pages/Background_Photo.png')
+    image = Image.open('photos/My_Photo/Background_Photo.png')
     st.image(image)
 
     # Sidebar content
     with st.sidebar:
-        st.image("photos/Default_Pages/Round_Profile_Photo.jpg", width=150) 
+        st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=150) 
 
         st.markdown("""
             ## Fahmi Zainal

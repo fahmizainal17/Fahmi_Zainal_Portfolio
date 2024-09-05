@@ -12,7 +12,7 @@ def show_experience():
     experiences = [
         {
             "company": "INVOKE Solutions",
-            "logo": "photos/Invoke_Logo.png",
+            "logo": "photos/Experience_Company_Logo/Invoke_Logo.png",
             "position": "**Senior Data Scientist**",  # Using Markdown for bold
             "duration": "Jul 2024 - Present · 2 mos",
             "location": "Federal Territory of Kuala Lumpur, Malaysia",
@@ -26,7 +26,7 @@ def show_experience():
         },
         {
             "company": "Kaggle",
-            "logo": "photos/Kaggle_Logo.png",  
+            "logo": "photos/Experience_Company_Logo/Kaggle_Logo.png",  
             "position": "**Data Scientist**",  # Using Markdown for bold
             "duration": "Mar 2023 - Present · 1 yr 6 mos",
             "location": "Kuala Lumpur, Malaysia · Remote",

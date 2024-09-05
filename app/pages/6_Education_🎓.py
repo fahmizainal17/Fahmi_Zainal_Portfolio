@@ -12,26 +12,26 @@ def show_education():
     education_list = [
         {
             "institution": "University of Malaya",
-            "logo": "photos/UM_Logo.png",
+            "logo": "photos/Education_Logo/University_of_Malaya_Logo.jpg",
             "degree": "**Bachelor of Science in Physics**",  # Using Markdown for bold
-            "duration": "2017 - 2021",
+            "duration": "2019 - 2023",
             "location": "Kuala Lumpur, Malaysia",
             "description": """
-                - Graduated with Honors in Physics.
-                - Completed a thesis on "Quantum Computing and Its Applications in Cryptography".
-                - Active member of the Physics Society and Student Council.
+                - Graduated with Honors and Distinction (First-Class) in Physics.
+                - 3 times Dean’s List Academic Achievement Award recipient".
+                - ROTU Best Cadet 2023 under Second Lieutenant Reserved Army Officer.
             """
         },
         {
             "institution": "University of Malaya",
-            "logo": "photos/UM_Logo.png",
+            "logo": "photos/Education_Logo/University_of_Malaya_Logo.jpg",
             "degree": "**Foundation in Physical Sciences**",  # Using Markdown for bold
-            "duration": "2013 - 2017",
+            "duration": "2018 - 2019",
             "location": "Kuala Lumpur, Malaysia",
             "description": """
-                - Graduated as Valedictorian.
-                - Participated in national-level science fairs and debates.
-                - Captained the school’s robotics team to win the state championship.
+                - Graduated with distintion.
+                - Participated in Olympiad in Science & Mathematics.
+                - Champion in University Tennis Championship 2018.
             """
         },
         # Add more education items as needed

@@ -20,7 +20,7 @@ def show_feedback_and_discussion():
 # Sidebar content
 with st.sidebar:
     # Profile Picture
-    st.image("photos/Round_Profile_Photo.jpg", width=150)  # Adjust the image path and size as needed
+    st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=150)  # Adjust the image path and size as needed
     
     st.header("Let's Connect! 🌐")
     st.write("Tell me about your experience with this app! 🎉")
