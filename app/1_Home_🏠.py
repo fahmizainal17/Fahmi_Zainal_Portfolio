@@ -24,7 +24,7 @@ def show():
     with c2:
         # Video Player
         st.markdown("## Video")
-        url =  "https://youtu.be/xqoMugFukUI?si=-gl0J7FjverrD6Xy"
+        url =  "https://youtu.be/vC7m-u0-qXg?si=yII1DzWfcf9qB8-9"
         st_player(url)
 
 # Call the show function if this script is executed directly
