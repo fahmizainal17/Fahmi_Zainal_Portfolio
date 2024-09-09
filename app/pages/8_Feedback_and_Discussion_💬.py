@@ -1,12 +1,18 @@
 import streamlit as st
 from PIL import Image
+from streamlit_player import st_player
 
 # Set the page layout to wide
 st.set_page_config(layout="wide")
 
 def show_feedback_and_discussion():
-    st.title("Feedback & Discussion 💬")
-    
+    c1, c2 = st.columns([10, 3])
+    with c1:
+        st.title("Feedback & Discussion 💬")
+    with c2:
+    # Embed a music from SoundCloud
+        st_player("https://youtu.be/VeUiVCb7ZmQ?si=GzSBUP3zs1hEkigI",height=100)
+
     st.markdown("---")
 
     # Center the Google Form in wide mode
