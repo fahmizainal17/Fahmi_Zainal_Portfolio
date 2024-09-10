@@ -2,16 +2,54 @@ import streamlit as st
 from PIL import Image
 from streamlit_player import st_player
 
+# Function to apply custom page style
+def apply_page_style():
+    custom_style = f"""
+        <style>
+            #MainMenu {{visibility: hidden;}}
+            footer {{visibility: hidden;}}
+            header {{visibility: hidden;}}
+            
+            /* Sidebar background using Unsplash image */
+            [data-testid="stSidebar"] > div:first-child {{
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                                url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d");
+                background-size: 180%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: local;
+            }}
+
+            [data-testid="stHeader"] {{
+                background: rgba(0,0,0,0);
+            }}
+
+            [data-testid="stToolbar"] {{
+                right: 2rem;
+            }}
+        </style>
+    """
+    st.markdown(custom_style, unsafe_allow_html=True)
+
 # Set the page layout to wide
 st.set_page_config(layout="wide")
 
+# Apply the page style to ensure the background matches the rest of the pages
+apply_page_style()
+
 def show_feedback_and_discussion():
-    c1, c2 = st.columns([10, 3])
+    c1, c2 = st.columns([10,8])
     with c1:
         st.title("Feedback & Discussion 💬")
+        
+        # Call to action button to play YouTube song
+        if st.button("🎵 Enjoy a Song While You Give Feedback"):
+            st.session_state['play_song'] = True  # Store the state to control the YouTube player visibility
+
     with c2:
-    # Embed a music from SoundCloud
-        st_player("https://youtu.be/VeUiVCb7ZmQ?si=GzSBUP3zs1hEkigI",height=100)
+        # Check if the button was clicked to show the YouTube player
+        if 'play_song' in st.session_state and st.session_state['play_song']:
+            st_player("https://www.youtube.com/watch?v=VeUiVCb7ZmQ?si=GzSBUP3zs1hEkigI", height=140)
 
     st.markdown("---")
 

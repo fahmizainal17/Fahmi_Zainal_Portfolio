@@ -6,7 +6,7 @@ def show_experience():
     # Apply page style
     page_style()
 
-    st.title("Experience 💼")
+    st.title("Experience 🧑‍💻")
     
     # Experience list
     experiences = [

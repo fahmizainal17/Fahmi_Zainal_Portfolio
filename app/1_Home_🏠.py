@@ -10,15 +10,15 @@ def show():
     with c1:
         st.markdown("""
         ## About
-        Fahmi Zainal is a highly skilled and results-driven Senior Data Scientist with over two years of comprehensive experience in Data Science, Analytics, Digital Marketing, and Software Development. He possesses expertise in Python, SQL, PowerBI, and machine learning, with a strong emphasis on designing and implementing data-driven solutions that optimize business processes and drive substantial revenue growth.
+        Meet Fahmi Zainal, a visionary in the world of data science, where numbers transform into strategies and insights become growth. As a Senior Data Scientist, Fahmi brings nearly two years of specialized experience in turning raw data into game-changing business outcomes, with a unique blend of skills in Python, SQL, machine learning, and PowerBI.
 
-        Throughout his career, Fahmi has successfully led and executed projects that have significantly enhanced data processing efficiency and contributed to revenue increases ranging from 5 to 6 figures (RM) through predictive modeling, digital marketing, and market research. His skill set extends to building interactive dashboards, engineering robust ETL pipelines, and deploying RESTful APIs, all while maintaining high standards in data integrity and security on platforms like Azure and AWS.
+        Fahmi's passion lies in crafting intelligent solutions that make data not just powerful, but irresistible. He has led high-impact projects that didn't just improve data efficiency—they revolutionized it, driving revenue leaps from thousands to six-figure success stories through predictive analytics, digital marketing, and market research.
 
-        At INVOKE Solutions, Fahmi leads initiatives in survey automation, where he designs and implements innovative tools that drastically reduce manual processing time. His role involves architecting and managing complex data warehouse infrastructures, developing predictive models, and deploying web applications that provide actionable insights to stakeholders. In addition to his technical contributions, he mentors aspiring data professionals and guides projects to successful completion, fostering a collaborative environment that encourages growth and excellence.
+        At INVOKE Solutions, Fahmi doesn't just build tools; he redefines possibilities. His work in survey automation slashes manual efforts to a fraction, architecting sophisticated data ecosystems that fuel faster, smarter decisions. With a flair for guiding teams and mentoring the next generation of data wizards, Fahmi thrives on collaboration, innovation, and the relentless pursuit of excellence.
 
-        Fahmi's leadership experience is complemented by a strong foundation in business analytics, where he integrates data science principles with strategic business objectives to drive meaningful outcomes. He is dedicated to continuous learning and development, consistently staying ahead of the curve in the fast-evolving landscape of data science and technology.
+        Fahmi's approach is simple: leverage data as the ultimate catalyst for business growth. He marries deep technical prowess with strategic thinking, driving forward outcomes that matter. Constantly on the frontier of new technologies, Fahmi is always learning, always evolving, and always ready to take on the next challenge.
 
-        You can connect with Fahmi on [LinkedIn](https://www.linkedin.com/in/fahmizainal17) and explore his work on [GitHub](https://github.com/fahmizainal17). He is always open to collaborations that leverage the power of data science to achieve exceptional business results.
+        Ready to harness the power of data science for extraordinary impact? Connect with Fahmi on [LinkedIn](https://www.linkedin.com/in/fahmizainal17) or explore his innovative projects on [GitHub](https://github.com/fahmizainal17). Let's turn insights into incredible results—together.
         """)
 
     with c2:
@@ -27,6 +27,5 @@ def show():
         url =  "https://youtu.be/vC7m-u0-qXg?si=yII1DzWfcf9qB8-9"
         st_player(url)
 
-# Call the show function if this script is executed directly
 if __name__ == "__main__":
     show()
