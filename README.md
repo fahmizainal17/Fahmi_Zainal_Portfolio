@@ -1,5 +1,19 @@
 # **📊 Fahmi Zainal Portfolio Website 📊**
 
+<!-- Badge to Visit My Portfolio -->
+<div align="center"> 
+    <a href="https://fahmizainal-portfolio.streamlit.app/">
+        <img src="https://img.shields.io/badge/Visit%20My%20Portfolio-Streamlit%20App-brightgreen?style=for-the-badge&logo=streamlit" alt="Visit My Portfolio"/>
+    </a>
+</div>
+
+<div align="center">
+    <!-- Image as a link -->
+    <a href="https://img.shields.io/badge/Visit%20My%20Portfolio-Streamlit%20App-brightgreen?style=for-the-badge&logo=streamlit">
+        <img src="assets/Home_Page_Portfolio.png" alt="Home Page Portfolio" style="max-width:100%;">
+    </a>
+</div>
+
 <div style="text-align: center;">
     <h1>Personal Portfolio built with Streamlit</h1>
     <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-lighttext.png" width="15%" alt="Streamlit Logo" />
