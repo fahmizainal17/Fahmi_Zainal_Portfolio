@@ -18,6 +18,7 @@ def check_password():
         if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # Don't store the password.
+            st.balloons()  # Show snow effect on successful login
         else:
             st.session_state["password_correct"] = False
 
@@ -25,10 +26,10 @@ def check_password():
     if st.session_state.get("password_correct", False):
         return True
 
-    # Show input for password.
-    st.text_input("Password", type="password", on_change=password_entered, key="password")
-    if "password_correct" in st.session_state:
-        st.error("😕 Password incorrect")
+    # Show input for password with a hint
+    st.text_input("Password (Hint: Frozen peep 🐧)", type="password", on_change=password_entered, key="password")
+    if "password_correct" in st.session_state and not st.session_state["password_correct"]:
+        st.error("😕 Password incorrect.")
     return False
 
 # Create tabs for different categories
