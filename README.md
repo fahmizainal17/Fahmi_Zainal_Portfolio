@@ -1,8 +1,8 @@
 # **📊 Fahmi Zainal Portfolio Website 📊**
 
-<div>
-    <h1 style="text-align: center;">Personal Portfolio built with Streamlit</h1>
-    <img style="text-align: left" src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-darktext.png" width="15%" />
+<div style="text-align: center;">
+    <h1>Personal Portfolio built with Streamlit</h1>
+    <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-lighttext.png" width="15%" alt="Streamlit Logo" />
 </div>
 <br>
 
