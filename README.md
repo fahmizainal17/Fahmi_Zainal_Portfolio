@@ -14,12 +14,6 @@
     </a>
 </div>
 
-<div style="text-align: center;">
-    <h1>Personal Portfolio built with Streamlit</h1>
-    <img src="https://streamlit.io/images/brand/streamlit-logo-primary-colormark-lighttext.png" width="15%" alt="Streamlit Logo" />
-</div>
-<br>
-
 ---
 
 ## **📋 Overview**
