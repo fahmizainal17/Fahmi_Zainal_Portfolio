@@ -96,7 +96,7 @@ def page_style():
         new_tab_button = """
         <a href="https://www.youtube.com/watch?v=VeUiVCb7ZmQ?si=GzSBUP3zs1hEkigI" target="_blank">
             <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
-                🎵 Play Music in a New Tab
+                🎵 Play Music while Reading
             </button>
         </a>
         """
