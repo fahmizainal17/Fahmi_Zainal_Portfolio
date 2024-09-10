@@ -1,13 +1,40 @@
 import streamlit as st
+import hmac
 from component import page_style
 
+# Apply the page style
 page_style()
 
 # Title for the Materials section
 st.title("Materials 📚")
 
+# Password check function
+def check_password():
+    """Returns `True` if the user has the correct password."""
+
+    def password_entered():
+        """Checks whether a password entered by the user is correct."""
+        # Access the secret password from the secrets.toml file
+        if hmac.compare_digest(st.session_state["password"], st.secrets["password"]):
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]  # Don't store the password.
+        else:
+            st.session_state["password_correct"] = False
+
+    # Return True if the password is validated.
+    if st.session_state.get("password_correct", False):
+        return True
+
+    # Show input for password.
+    st.text_input("Password", type="password", on_change=password_entered, key="password")
+    if "password_correct" in st.session_state:
+        st.error("😕 Password incorrect")
+    return False
+
 # Create tabs for different categories
-tab1, tab2, tab3, tab4 = st.tabs(["Documentation & Reports", "Presentations & Slides", "Code Repositories", "Datasets & Tools"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    ["Documentation & Reports", "Presentations & Slides", "Code Repositories", "Datasets & Tools", "Certificate Videos"]
+)
 
 # Tab 1: Documentation & Reports
 with tab1:
@@ -40,8 +67,18 @@ with tab3:
 with tab4:
     st.subheader("Datasets & Tools")
     st.markdown("""
-    - **[Public Dataset](https://www.kaggle.com/datasets)**: Raw ,cleaned and processed dataset from Kaggle.
+    - **[Public Dataset](https://www.kaggle.com/datasets)**: Raw, cleaned, and processed dataset from Kaggle.
     - **[Custom Tool: Data Pipeline Automation](https://airflow.apache.org/)**: A custom tool for automating data pipelines.
     - **[Cheat Sheet: Python for Data Science](https://www.datacamp.com/community/data-science-cheatsheets)**: A quick-reference guide for Python in data science.
     """)
 
+# Tab 5: Certificate Videos (Password Protected)
+with tab5:
+    st.subheader("Certificate Videos (Password Protected)")
+
+    # Check if the user has entered the correct password
+    if check_password():
+        # Display all the confidential content from secrets.toml
+        st.markdown(st.secrets["confidential_content"])
+    else:
+        st.write("🔒 Enter the correct password to access this content.")
