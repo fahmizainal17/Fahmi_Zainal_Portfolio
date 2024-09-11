@@ -7,9 +7,12 @@ def show_experience():
     page_style()
 
     st.title("Experience 🧑‍💻")
-    
-    # Experience list
-    experiences = [
+
+    # Create tabs
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["All Experience", "Technical Role", "Non-Tech Role", "Internship", "Freelance"])
+
+    # Define experience categories
+    all_experiences = [
         {
             "company": "INVOKE Solutions",
             "logo": "photos/Experience_Company_Logo/Invoke_Logo.png",
@@ -41,6 +44,22 @@ def show_experience():
                     "skills": "REST APIs, Linux Architecture, Microsoft Azure, Computer Vision, Predictive Modeling, Streamlit, Data Science, Deep Learning"
                 }
             ]
+        },
+        {
+            "company": "Kaggle",
+            "logo": "photos/Experience_Company_Logo/Kaggle_Logo.png",
+            "position": "**Data Scientist**",
+            "duration": "Mar 2023 - Present · 1 yr 7 mos",
+            "location": "Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia · Freelance",
+            "description": """
+                - Participated and contributed actively in the Real World Data Machine Learning Project Competition.
+                - Spearheaded nightly and ad-hoc meetings to discuss strategies and points of view about the competition projects.
+                - Improved projects to the top 30% utilizing various techniques and models.
+                - Achieved top 28% ranking out of 1908 teams in a Binary Prediction Competition on Smoker Status Using Bio-Signals, leveraging logistic regression, random forest, and tree-boosted algorithms such as Gradient Boosting, LightGBM, XGBoost, and CatBoost.
+                - Planned the work meticulously, conducting nightly meetings to discuss strategies and optimize models using Optuna for hyperparameter tuning.
+                - Implemented a weighted voting classifier for enhanced performance, resulting in an ROC-AUC score of 0.87178, equating to 87% accuracy.
+            """,
+            "skills": "Linux Architecture, Linux, Coaching, Shell Scripting, Git, Microsoft Azure Databricks, Data Management, Linear Programming, Data Analytics, Streamlit, Data Science, Docker, Presentation Skills"
         },
         {
             "company": "Excelerate Asia",
@@ -138,6 +157,34 @@ def show_experience():
         },
     ]
 
+    # Filter experiences for each category
+    technical_roles = [exp for exp in all_experiences if any(pos['position'] in ["**Senior Data Scientist**", "**Data Scientist**", "**Data Analyst**", "**Research Officer Trainee**"] for pos in exp.get('positions', [exp]))]
+    non_technical_roles = [exp for exp in all_experiences if any(pos['position'] in ["**Second Lieutenant Reserved Officer**", "**Army Cadet Reserved Officer**", "**Affiliate Marketing Specialist**", "**Courier Driver Specialist**", "**Food And Beverage Specialist**", "**Data Scientist**"] for pos in exp.get('positions', [exp]))]
+    internships = [exp for exp in all_experiences if exp.get('position', '').startswith("**Research Officer Trainee**")]
+    freelances = [exp for exp in all_experiences if exp.get('position', '').startswith("**Data Scientist**") or exp.get('position', '').startswith("**Courier Driver Specialist**")]
+
+    # Display content for each tab
+    with tab1:
+        st.subheader("All Experience")
+        display_experiences(all_experiences)
+    
+    with tab2:
+        st.subheader("Technical Roles")
+        display_experiences(technical_roles)
+    
+    with tab3:
+        st.subheader("Non-Technical Roles")
+        display_experiences(non_technical_roles)
+    
+    with tab4:
+        st.subheader("Internships")
+        display_experiences(internships)
+    
+    with tab5:
+        st.subheader("Freelance")
+        display_experiences(freelances)
+
+def display_experiences(experiences):
     for exp in experiences:
         c1, c2 = st.columns([1, 7], gap="small")
         with c1:
@@ -155,9 +202,7 @@ def show_experience():
                 st.markdown(exp['description'])
                 st.write(f"**Skills:** {exp['skills']}")
         
-        # Add horizontal line after each experience
         st.markdown("---")
 
-# Call the show_experience function if this script is executed directly
 if __name__ == "__main__":
     show_experience()
