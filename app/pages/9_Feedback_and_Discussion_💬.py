@@ -14,7 +14,7 @@ def apply_page_style():
             [data-testid="stSidebar"] > div:first-child {{
                 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                                 url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d");
-                background-size: 180%;
+                background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: local;
