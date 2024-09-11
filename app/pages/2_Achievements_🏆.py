@@ -1,11 +1,13 @@
 import streamlit as st
 from component import page_style
 
-def show_achievements():
-    # Apply page style
-    page_style()
+# Apply page style
+page_style()
 
-    st.title("Achievements 🏆")
+st.title("Achievements 🏆")
+
+# Feature Project
+def featured_project():
 
     # Achievement 1: Development of In-House Data Processing and Reporting Automation Tool
     st.markdown("### Development of In-House Data Processing and Reporting Automation Tool")
@@ -82,6 +84,20 @@ def show_achievements():
 
     st.markdown("---")
 
-# Call the show_certifications function if this script is executed directly
-if __name__ == "__main__":
-    show_achievements()
+# Create tabs for different categories
+tab1, tab2 = st.tabs(
+    ["Featured Projects", "Featured Articles"]
+)
+
+# Tab 1: Featured Projects
+with tab1:
+    featured_project()
+
+# Tab 2: Featured Articles
+with tab2:
+    st.subheader("Featured Articles")
+    st.markdown("""
+    - **[Project Report: Data Analysis Documentation](https://databox.com/data-analysis-report)**: A general project report guidance on data analysis practices and methodologies.
+    - **[API Documentation: FastAPI Integration](https://swagger.io/tools/swaggerhub/)**: Comprehensive API documentation for integrating FastAPI with existing systems.
+    - **[White Paper: Data Science Best Practices](https://medium.com/bitgrit-data-science-publication/10-best-practices-for-data-science-21a748a410e4)**: An in-depth white paper on data science best practices.
+    """)
