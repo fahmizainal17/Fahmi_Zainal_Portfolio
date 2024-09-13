@@ -18,7 +18,7 @@ def show_education():
             "location": "Kuala Lumpur, Malaysia",
             "description": """
                 - Graduated with Honors and Distinction (First-Class) in Physics.
-                - 3 times Dean’s List Academic Achievement Award recipient".
+                - 3 times Dean’s List Academic Achievement Award recipient.
                 - ROTU Best Cadet 2023 under Second Lieutenant Reserved Army Officer.
             """
         },
