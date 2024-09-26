@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_player import st_player
+
 from component import page_style
 
 page_style()
@@ -29,3 +30,5 @@ def show():
 
 if __name__ == "__main__":
     show()
+
+# Future
