@@ -159,7 +159,7 @@ def show_experience():
 
     # Filter experiences for each category
     technical_roles = [exp for exp in all_experiences if any(pos['position'] in ["**Senior Data Scientist**", "**Data Scientist**", "**Data Analyst**", "**Research Officer Trainee**"] for pos in exp.get('positions', [exp]))]
-    non_technical_roles = [exp for exp in all_experiences if any(pos['position'] in ["**Second Lieutenant Reserved Officer**", "**Army Cadet Reserved Officer**", "**Affiliate Marketing Specialist**", "**Courier Driver Specialist**", "**Food And Beverage Specialist**", "**Data Scientist**"] for pos in exp.get('positions', [exp]))]
+    non_technical_roles = [exp for exp in all_experiences if any(pos['position'] in ["**Second Lieutenant Reserved Officer**", "**Army Cadet Reserved Officer**", "**Affiliate Marketing Specialist**", "**Courier Driver Specialist**", "**Food And Beverage Specialist**", ] for pos in exp.get('positions', [exp]))]
     internships = [exp for exp in all_experiences if exp.get('position', '').startswith("**Research Officer Trainee**")]
     freelances = [exp for exp in all_experiences if exp.get('position', '').startswith("**Data Scientist**") or exp.get('position', '').startswith("**Courier Driver Specialist**")]
 
