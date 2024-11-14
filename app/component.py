@@ -75,7 +75,7 @@ def page_style():
         st.markdown("<h1 style='font-size: 1.5em;'><strong>Fahmi Zainal</strong>, <em>Data Scientist</em></h1>", unsafe_allow_html=True)
 
         st.markdown("""
-        **Data Scientist | Analytics Engineer | Survey | Digital Marketing | Software Development | ML & AI | ETL | Databricks | API Deployment | Azure & AWS DevOps Practitioner | Army Reserved Officer 🎖**
+        **Data Scientist | Transforming Data into Insights | ML & AI Solutions Architect | Scalable ETL and API Deployment | Survey & Digital Strategy Innovator | Army Reserved Officer 🎖**
         """)
 
         st.markdown("""
