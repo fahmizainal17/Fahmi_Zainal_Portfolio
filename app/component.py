@@ -72,20 +72,12 @@ def page_style():
     with st.sidebar:
         col1,col2 =st.columns([1, 3])
 
-        with col1:
-            # Display the round profile picture at the top of the sidebar
-            st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
-
-        with col2:
-            # Display the full name
-            st.markdown("<h1 style='text-align: center; color: white;'>Fahmi Zainal</h1>", unsafe_allow_html=True)
-
-        # Display the round profile picture at the top of the sidebar
-        st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
+        col1.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
+        
+        col2.markdown("<h1 style='text-align: center; color: white;'>Fahmi Zainal</h1>", unsafe_allow_html=True)
 
         st.markdown("""
-            ## Fahmi Zainal
-            **Data Scientist | Analytics Engineer | Survey | Digital Marketing | Software Development | ML & AI | ETL | Databricks | API Deployment | Azure & AWS DevOps Practitioner | Army Reserved Officer 🎖**
+        **Data Scientist | Analytics Engineer | Survey | Digital Marketing | Software Development | ML & AI | ETL | Databricks | API Deployment | Azure & AWS DevOps Practitioner | Army Reserved Officer 🎖**
         """)
 
         st.markdown("""
