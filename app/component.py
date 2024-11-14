@@ -91,7 +91,7 @@ def page_style():
                 /* Style for each skill box */
                 .skill-box {
                     position: relative;
-                    background-color: #333333;
+                    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
                     color: #ffffff;
                     padding: 15px;
                     border-radius: 8px;
@@ -99,11 +99,13 @@ def page_style():
                     font-weight: bold;
                     cursor: pointer;
                     transition: transform 0.3s;
+                    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
                 }
 
                 .skill-box:hover {
                     transform: scale(1.05);
-                    background-color: #4CAF50;
+                    background-color: rgba(0, 0, 0, 0.6); /* Darken slightly on hover */
                 }
 
                 /* Tooltip styling */
@@ -165,7 +167,7 @@ def page_style():
                 </div>
             </div>
         """, unsafe_allow_html=True)
-
+        
 
         # HTML and JavaScript to open YouTube in a new tab
         new_tab_button = """
