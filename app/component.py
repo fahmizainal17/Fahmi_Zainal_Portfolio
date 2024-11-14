@@ -70,7 +70,7 @@ def page_style():
 
     # Sidebar content
     with st.sidebar:
-        col1,col2 =st.columns([1, 0.1])
+        col1,col2 =st.columns([1, 1.5])
 
         col1.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
 
