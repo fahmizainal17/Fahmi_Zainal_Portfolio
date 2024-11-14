@@ -70,11 +70,23 @@ def page_style():
 
     # Sidebar content
     with st.sidebar:
-        # Display the round profile picture at the top of the sidebar
-        st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
 
+        col1,col2,col3 =st.columns(3)
+
+        with col1
+            # Display the round profile picture at the top of the sidebar
+            st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
+
+        with col2:
+            # Display the full name
+            st.markdown("<h1 style='text-align: center; color: white;'>Fahmi Zainal</h1>", unsafe_allow_html=True)
+
+        with col3:
+            # Display the role
+            st.markdown("<h2 style='text-align: center; color: white;'>Data Scientist</h2>", unsafe_allow_html=True)
+
+        # Display the profile summary
         st.markdown("""
-            ## Fahmi Zainal
             **Data Scientist | Analytics Engineer | Survey | Digital Marketing | Software Development | ML & AI | ETL | Databricks | API Deployment | Azure & AWS DevOps Practitioner | Army Reserved Officer 🎖**
         """)
 
