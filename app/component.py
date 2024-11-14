@@ -80,17 +80,65 @@ def page_style():
 
         st.markdown("""
         ### Top Skills
-        - **Data Analytics, EDA and Modelling**
-        - **Power BI and Tableau Dashboarding**
-        - **Python (Programming Language)**
-        - **SQL Querying and Modelling**
-        - **Machine Learning (ML)**
-        - **RESTful APIs Designing**
-        - **Databricks**
-        - **AWS(S3, ECS, EC2)**
-        - **Google Cloud Platform (GCP) APIs**
-        - **TensorFlow and Pytorch Framework**
-        """)
+        <style>
+            .skill-box {
+                padding: 8px 15px;
+                margin: 5px 0;
+                border-radius: 8px;
+                background-color: #333333;
+                color: white;
+                cursor: pointer;
+                font-weight: bold;
+                text-align: center;
+            }
+            .popup {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.5);
+                justify-content: center;
+                align-items: center;
+            }
+            .popup-content {
+                background-color: #ffffff;
+                padding: 20px;
+                border-radius: 8px;
+                width: 300px;
+                text-align: center;
+                font-size: 16px;
+                color: black;
+            }
+        </style>
+
+        <div class="skill-box" onclick="showPopup('Data Analytics & Insights – Extracting actionable insights to drive data-driven decisions')">Data Analytics</div>
+        <div class="skill-box" onclick="showPopup('Exploratory Data Analysis & Modeling – Uncovering trends and building predictive models')">EDA & Modeling</div>
+        <div class="skill-box" onclick="showPopup('Data Visualization – Creating dynamic dashboards with Power BI & Tableau')">Data Visualization</div>
+        <div class="skill-box" onclick="showPopup('Python – Advanced data processing, automation, and ML pipelines')">Python</div>
+        <div class="skill-box" onclick="showPopup('SQL – Data transformation and modeling for robust analytics')">SQL</div>
+        <div class="skill-box" onclick="showPopup('Machine Learning – Developing predictive models for impactful solutions')">Machine Learning</div>
+        <div class="skill-box" onclick="showPopup('RESTful APIs – Designing scalable data-driven APIs')">RESTful APIs</div>
+        <div class="skill-box" onclick="showPopup('Cloud Solutions – Expertise in Databricks, AWS, and GCP')">Cloud Solutions</div>
+        <div class="skill-box" onclick="showPopup('Deep Learning – Building models with TensorFlow and PyTorch')">Deep Learning</div>
+
+        <div id="popup" class="popup" onclick="hidePopup()">
+            <div class="popup-content" id="popup-content"></div>
+        </div>
+
+        <script>
+            function showPopup(text) {
+                document.getElementById('popup-content').innerText = text;
+                document.getElementById('popup').style.display = 'flex';
+            }
+
+            function hidePopup() {
+                document.getElementById('popup').style.display = 'none';
+            }
+        </script>
+        """, unsafe_allow_html=True)
 
         # HTML and JavaScript to open YouTube in a new tab
         new_tab_button = """
