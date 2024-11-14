@@ -70,6 +70,19 @@ def page_style():
 
     # Sidebar content
     with st.sidebar:
+         col1,col2,col3 =st.columns(3)
+
+        with col1
+            # Display the round profile picture at the top of the sidebar
+            st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
+
+        with col2:
+            # Display the full name
+            st.markdown("<h1 style='text-align: center; color: white;'>Fahmi Zainal</h1>", unsafe_allow_html=True)
+
+        with col3:
+            # Display the role
+            st.markdown("<h2 style='text-align: center; color: white;'>Data Scientist</h2>", unsafe_allow_html=True)
         # Display the round profile picture at the top of the sidebar
         st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
 
