@@ -70,13 +70,11 @@ def page_style():
 
     # Sidebar content
     with st.sidebar:
-        col1,col2 =st.columns([1, 1.5])
-
-        col1.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
-
-        col2.markdown("<h1 style='text-align: center; color: white;'>Fahmi Zainal</h1>", unsafe_allow_html=True)
+        # Profile Picture
+        st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
 
         st.markdown("""
+        **Fahmi Zainal**, *Data Scientist*
         **Data Scientist | Analytics Engineer | Survey | Digital Marketing | Software Development | ML & AI | ETL | Databricks | API Deployment | Azure & AWS DevOps Practitioner | Army Reserved Officer 🎖**
         """)
 
