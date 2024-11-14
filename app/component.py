@@ -79,70 +79,91 @@ def page_style():
         """)
 
         st.markdown("""
-        <style>
-            .skill {
-                position: relative;
-                display: inline-block;
-                font-weight: bold;
-                color: #ffffff;
-            }
+            <style>
+                /* Container for the skill boxes */
+                .skills-container {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 10px;
+                    padding: 10px;
+                }
 
-            .skill .tooltip {
-                visibility: hidden;
-                width: 250px;
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 8px;
-                border-radius: 5px;
-                position: absolute;
-                z-index: 1;
-                bottom: 125%; /* Position above the skill */
-                left: 50%;
-                margin-left: -125px;
-                opacity: 0;
-                transition: opacity 0.3s;
-            }
+                /* Style for each skill box */
+                .skill-box {
+                    position: relative;
+                    background-color: #333333;
+                    color: #ffffff;
+                    padding: 15px;
+                    border-radius: 8px;
+                    text-align: center;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: transform 0.3s;
+                }
 
-            .skill:hover .tooltip {
-                visibility: visible;
-                opacity: 1;
-            }
-        </style>
+                .skill-box:hover {
+                    transform: scale(1.05);
+                    background-color: #4CAF50;
+                }
 
-        ### Top Skills
-        <div>
-            <p class="skill">Data Analytics, EDA and Modelling
-                <span class="tooltip">Extracting insights and building predictive models to drive data-driven decisions.</span>
-            </p>
-            <p class="skill">Power BI and Tableau Dashboarding
-                <span class="tooltip">Creating interactive dashboards to make data accessible and actionable.</span>
-            </p>
-            <p class="skill">Python (Programming Language)
-                <span class="tooltip">Advanced programming for data processing, automation, and machine learning.</span>
-            </p>
-            <p class="skill">SQL Querying and Modelling
-                <span class="tooltip">Data transformation and efficient querying for analytics and reporting.</span>
-            </p>
-            <p class="skill">Machine Learning (ML)
-                <span class="tooltip">Developing ML models for predictive analysis and impactful solutions.</span>
-            </p>
-            <p class="skill">RESTful APIs Designing
-                <span class="tooltip">Designing scalable APIs for data-driven applications.</span>
-            </p>
-            <p class="skill">Databricks
-                <span class="tooltip">Big data processing and collaborative analytics in the cloud.</span>
-            </p>
-            <p class="skill">AWS (S3, ECS, EC2)
-                <span class="tooltip">Cloud solutions for scalable storage, computing, and model deployment.</span>
-            </p>
-            <p class="skill">Google Cloud Platform (GCP) APIs
-                <span class="tooltip">Managing data pipelines and deploying analytics on GCP.</span>
-            </p>
-            <p class="skill">TensorFlow and PyTorch Framework
-                <span class="tooltip">Building and fine-tuning deep learning models for complex tasks.</span>
-            </p>
-        </div>
+                /* Tooltip styling */
+                .skill-box .tooltip {
+                    visibility: hidden;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.9);
+                    color: #fff;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 8px;
+                    position: absolute;
+                    bottom: 110%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    opacity: 0;
+                    transition: opacity 0.3s;
+                    font-size: 14px;
+                    z-index: 1;
+                }
+
+                .skill-box:hover .tooltip {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            </style>
+
+            ### Top Skills
+            <div class="skills-container">
+                <div class="skill-box">Data Analytics, EDA and Modelling
+                    <span class="tooltip">Extracting insights and building predictive models to drive data-driven decisions.</span>
+                </div>
+                <div class="skill-box">Power BI and Tableau Dashboarding
+                    <span class="tooltip">Creating interactive dashboards to make data accessible and actionable.</span>
+                </div>
+                <div class="skill-box">Python (Programming Language)
+                    <span class="tooltip">Advanced programming for data processing, automation, and machine learning.</span>
+                </div>
+                <div class="skill-box">SQL Querying and Modelling
+                    <span class="tooltip">Data transformation and efficient querying for analytics and reporting.</span>
+                </div>
+                <div class="skill-box">Machine Learning (ML)
+                    <span class="tooltip">Developing ML models for predictive analysis and impactful solutions.</span>
+                </div>
+                <div class="skill-box">RESTful APIs Designing
+                    <span class="tooltip">Designing scalable APIs for data-driven applications.</span>
+                </div>
+                <div class="skill-box">Databricks
+                    <span class="tooltip">Big data processing and collaborative analytics in the cloud.</span>
+                </div>
+                <div class="skill-box">AWS (S3, ECS, EC2)
+                    <span class="tooltip">Cloud solutions for scalable storage, computing, and model deployment.</span>
+                </div>
+                <div class="skill-box">Google Cloud Platform (GCP) APIs
+                    <span class="tooltip">Managing data pipelines and deploying analytics on GCP.</span>
+                </div>
+                <div class="skill-box">TensorFlow and PyTorch Framework
+                    <span class="tooltip">Building and fine-tuning deep learning models for complex tasks.</span>
+                </div>
+            </div>
         """, unsafe_allow_html=True)
 
 
