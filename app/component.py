@@ -71,7 +71,7 @@ def page_style():
     # Sidebar content
     with st.sidebar:
         # Display the round profile picture at the top of the sidebar
-        st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=150)
+        st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80, height=50)
 
         st.markdown("""
             ## Fahmi Zainal
