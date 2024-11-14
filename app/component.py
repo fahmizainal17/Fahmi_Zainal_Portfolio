@@ -79,66 +79,72 @@ def page_style():
         """)
 
         st.markdown("""
-        ### Top Skills
         <style>
-            .skill-box {
-                padding: 8px 15px;
-                margin: 5px 0;
-                border-radius: 8px;
-                background-color: #333333;
-                color: white;
-                cursor: pointer;
+            .skill {
+                position: relative;
+                display: inline-block;
                 font-weight: bold;
-                text-align: center;
+                color: #ffffff;
             }
-            .popup {
-                display: none;
-                position: fixed;
+
+            .skill .tooltip {
+                visibility: hidden;
+                width: 250px;
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 8px;
+                border-radius: 5px;
+                position: absolute;
                 z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.5);
-                justify-content: center;
-                align-items: center;
+                bottom: 125%; /* Position above the skill */
+                left: 50%;
+                margin-left: -125px;
+                opacity: 0;
+                transition: opacity 0.3s;
             }
-            .popup-content {
-                background-color: #ffffff;
-                padding: 20px;
-                border-radius: 8px;
-                width: 300px;
-                text-align: center;
-                font-size: 16px;
-                color: black;
+
+            .skill:hover .tooltip {
+                visibility: visible;
+                opacity: 1;
             }
         </style>
 
-        <div class="skill-box" onclick="showPopup('Data Analytics & Insights – Extracting actionable insights to drive data-driven decisions')">Data Analytics</div>
-        <div class="skill-box" onclick="showPopup('Exploratory Data Analysis & Modeling – Uncovering trends and building predictive models')">EDA & Modeling</div>
-        <div class="skill-box" onclick="showPopup('Data Visualization – Creating dynamic dashboards with Power BI & Tableau')">Data Visualization</div>
-        <div class="skill-box" onclick="showPopup('Python – Advanced data processing, automation, and ML pipelines')">Python</div>
-        <div class="skill-box" onclick="showPopup('SQL – Data transformation and modeling for robust analytics')">SQL</div>
-        <div class="skill-box" onclick="showPopup('Machine Learning – Developing predictive models for impactful solutions')">Machine Learning</div>
-        <div class="skill-box" onclick="showPopup('RESTful APIs – Designing scalable data-driven APIs')">RESTful APIs</div>
-        <div class="skill-box" onclick="showPopup('Cloud Solutions – Expertise in Databricks, AWS, and GCP')">Cloud Solutions</div>
-        <div class="skill-box" onclick="showPopup('Deep Learning – Building models with TensorFlow and PyTorch')">Deep Learning</div>
-
-        <div id="popup" class="popup" onclick="hidePopup()">
-            <div class="popup-content" id="popup-content"></div>
+        ### Top Skills
+        <div>
+            <p class="skill">Data Analytics, EDA and Modelling
+                <span class="tooltip">Extracting insights and building predictive models to drive data-driven decisions.</span>
+            </p>
+            <p class="skill">Power BI and Tableau Dashboarding
+                <span class="tooltip">Creating interactive dashboards to make data accessible and actionable.</span>
+            </p>
+            <p class="skill">Python (Programming Language)
+                <span class="tooltip">Advanced programming for data processing, automation, and machine learning.</span>
+            </p>
+            <p class="skill">SQL Querying and Modelling
+                <span class="tooltip">Data transformation and efficient querying for analytics and reporting.</span>
+            </p>
+            <p class="skill">Machine Learning (ML)
+                <span class="tooltip">Developing ML models for predictive analysis and impactful solutions.</span>
+            </p>
+            <p class="skill">RESTful APIs Designing
+                <span class="tooltip">Designing scalable APIs for data-driven applications.</span>
+            </p>
+            <p class="skill">Databricks
+                <span class="tooltip">Big data processing and collaborative analytics in the cloud.</span>
+            </p>
+            <p class="skill">AWS (S3, ECS, EC2)
+                <span class="tooltip">Cloud solutions for scalable storage, computing, and model deployment.</span>
+            </p>
+            <p class="skill">Google Cloud Platform (GCP) APIs
+                <span class="tooltip">Managing data pipelines and deploying analytics on GCP.</span>
+            </p>
+            <p class="skill">TensorFlow and PyTorch Framework
+                <span class="tooltip">Building and fine-tuning deep learning models for complex tasks.</span>
+            </p>
         </div>
-
-        <script>
-            function showPopup(text) {
-                document.getElementById('popup-content').innerText = text;
-                document.getElementById('popup').style.display = 'flex';
-            }
-
-            function hidePopup() {
-                document.getElementById('popup').style.display = 'none';
-            }
-        </script>
         """, unsafe_allow_html=True)
+
 
         # HTML and JavaScript to open YouTube in a new tab
         new_tab_button = """
