@@ -72,9 +72,9 @@ def page_style():
     with st.sidebar:
         # Profile Picture
         st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
+        st.markdown("<h1 style='font-size: 2.5em;'><strong>Fahmi Zainal</strong>, <em>Data Scientist</em></h1>", unsafe_allow_html=True)
 
         st.markdown("""
-        **Fahmi Zainal**, *Data Scientist*
         **Data Scientist | Analytics Engineer | Survey | Digital Marketing | Software Development | ML & AI | ETL | Databricks | API Deployment | Azure & AWS DevOps Practitioner | Army Reserved Officer 🎖**
         """)
 
