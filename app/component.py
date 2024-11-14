@@ -72,7 +72,7 @@ def page_style():
     with st.sidebar:
          col1,col2,col3 =st.columns(3)
 
-        with col1
+        with col1:
             # Display the round profile picture at the top of the sidebar
             st.image("photos/My_Photo/Round_Profile_Photo.jpg", width=80)
 
