@@ -27,6 +27,7 @@ def show_achievements():
         st.image("photos/Achievements/LLM_as_Judge_Win.png", caption="First Place in AI Tinkerers Hackathon", use_column_width=True)
         st.markdown("[View SUPA's Post](https://www.linkedin.com/posts/supa-ai_llms-techinnovation-llm-ugcPost-7256683803899764736-8-Li)")
         st.markdown("[View Team Member's Post](https://www.linkedin.com/posts/ammar-azman_ai-tinkerers-hackathon-llm-as-judge-our-ugcPost-7255415579488968704-uFWx)")
+        st.markdown("[View on Github](https://github.com/wanadzhar913/aitinkerers-hackathon-supa-team-werecooked)")
 
     st.markdown("---")
 
