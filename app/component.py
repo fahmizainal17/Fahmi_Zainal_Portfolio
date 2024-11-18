@@ -11,12 +11,13 @@ def get_base64_of_bin_file(bin_file):
     return base64.b64encode(data).decode()
 
 def page_style():
-    # Encode the local GIF to base64
-    sidebar_gif_base64 = get_base64_of_bin_file('assets/background_sidebar.jpg')
+    # Encode the local background image for the sidebar
+    sidebar_bg_base64 = get_base64_of_bin_file('assets/background_sidebar.jpg')
 
-    # Apply custom styles, including the sidebar background GIF
+    # Apply custom styles, including the sidebar background image
     custom_style = f"""
         <style>
+            /* Hide Streamlit's default menu, footer, and header */
             #MainMenu {{visibility: hidden;}}
             footer {{visibility: hidden;}}
             header {{visibility: hidden;}}
@@ -24,13 +25,14 @@ def page_style():
             /* Sidebar background with a dark overlay */
             [data-testid="stSidebar"] > div:first-child {{
                 background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                                  url("data:image/gif;base64,{sidebar_gif_base64}");
+                                  url("data:image/jpg;base64,{sidebar_bg_base64}");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: local;
             }}
 
+            /* Adjust the header and toolbar */
             [data-testid="stHeader"] {{
                 background: rgba(0,0,0,0);
             }}
@@ -39,20 +41,40 @@ def page_style():
                 right: 2rem;
             }}
 
-            .stButton>button {{background-color: #4CAF50; color: white !important;}}
-            .stDownloadButton>button {{background-color: #4CAF50; color: white !important;}}
-
-            /* Certification Card Styles */
-            .cert-card {{
-                background-color: #333333;
-                color: white;
-                padding: 15px;
-                margin: 10px 0;
+            /* Style for buttons */
+            .stButton>button {{
+                background-color: #4CAF50; 
+                color: white !important;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
                 border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             }}
-            .cert-card:hover {{
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            .stDownloadButton>button {{
+                background-color: #4CAF50; 
+                color: white !important;
+                border: none;
+                padding: 10px 20px;
+                text-align: center;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 8px;
+            }}
+
+            /* Skill Category Styles */
+            .skill-category {{
+                font-weight: bold;
+                margin-bottom: 10px;
+            }}
+
+            /* Skill Description Styles */
+            .skill-description {{
+                margin-left: 15px;
+                margin-bottom: 10px;
             }}
         </style>
     """
@@ -66,7 +88,7 @@ def page_style():
 
     # Display the main background image
     image = Image.open('photos/My_Photo/Background_Photo.png')
-    st.image(image)
+    st.image(image, use_column_width=True)
 
     # Sidebar content
     with st.sidebar:
@@ -79,99 +101,112 @@ def page_style():
         """)
 
         st.markdown("""
-            <style>
-                /* Container for the skill boxes */
-                .skills-container {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                    gap: 10px;
-                    padding: 10px;
-                }
-
-                /* Style for each skill box */
-                .skill-box {
-                    position: relative;
-                    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
-                    color: #ffffff;
-                    padding: 15px;
-                    border-radius: 8px;
-                    text-align: center;
-                    font-weight: bold;
-                    cursor: pointer;
-                    transition: transform 0.3s;
-                    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
-                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-                }
-
-                .skill-box:hover {
-                    transform: scale(1.05);
-                    background-color: rgba(0, 0, 0, 0.6); /* Darken slightly on hover */
-                }
-
-                /* Tooltip styling */
-                .skill-box .tooltip {
-                    visibility: hidden;
-                    width: 100%;
-                    background-color: rgba(0, 0, 0, 0.9);
-                    color: #fff;
-                    text-align: center;
-                    padding: 10px;
-                    border-radius: 8px;
-                    position: absolute;
-                    bottom: 110%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    opacity: 0;
-                    transition: opacity 0.3s;
-                    font-size: 14px;
-                    z-index: 1;
-                }
-
-                .skill-box:hover .tooltip {
-                    visibility: visible;
-                    opacity: 1;
-                }
-            </style>
-
-            ### Top Skills
-            <div class="skills-container">
-                <div class="skill-box">Data Analytics, EDA and Modelling
-                    <span class="tooltip">Extracting insights and building predictive models to drive data-driven decisions.</span>
-                </div>
-                <div class="skill-box">Power BI and Tableau Dashboarding
-                    <span class="tooltip">Creating interactive dashboards to make data accessible and actionable.</span>
-                </div>
-                <div class="skill-box">Python (Programming Language)
-                    <span class="tooltip">Advanced programming for data processing, automation, and machine learning.</span>
-                </div>
-                <div class="skill-box">SQL Querying and Modelling
-                    <span class="tooltip">Data transformation and efficient querying for analytics and reporting.</span>
-                </div>
-                <div class="skill-box">Machine Learning (ML)
-                    <span class="tooltip">Developing ML models for predictive analysis and impactful solutions.</span>
-                </div>
-                <div class="skill-box">RESTful APIs Designing
-                    <span class="tooltip">Designing scalable APIs for data-driven applications.</span>
-                </div>
-                <div class="skill-box">Databricks
-                    <span class="tooltip">Big data processing and collaborative analytics in the cloud.</span>
-                </div>
-                <div class="skill-box">AWS (S3, ECS, EC2)
-                    <span class="tooltip">Cloud solutions for scalable storage, computing, and model deployment.</span>
-                </div>
-                <div class="skill-box">Google Cloud Platform (GCP) APIs
-                    <span class="tooltip">Managing data pipelines and deploying analytics on GCP.</span>
-                </div>
-                <div class="skill-box">TensorFlow and PyTorch Framework
-                    <span class="tooltip">Building and fine-tuning deep learning models for complex tasks.</span>
-                </div>
-            </div>
+            <h3>Top Skills</h3>
         """, unsafe_allow_html=True)
-        
 
-        # HTML and JavaScript to open YouTube in a new tab
+        # Data Science & Analytics
+        with st.expander("📊 Data Science & Analytics", expanded=False):
+            st.markdown("""
+                **Statistical Analysis:**  
+                Proficient in applying statistical methods to interpret complex data sets. Demonstrated expertise in the **Weighting Strata Project** using R and Databricks, which improved survey data representativeness by adjusting for demographic factors.
+
+                **Data Mining:**  
+                Expertise in extracting meaningful patterns and insights from large datasets. Showcased in the **Development of In-House Data Processing and Reporting Automation Tool**, which streamlined data workflows and reduced processing time from 8 hours to 30 minutes.
+
+                **Data Visualization:**  
+                Skilled in creating intuitive visual representations of data using tools like Tableau, Power BI, and matplotlib. Enhanced the **ROAS Dashboard** project, increasing data visualization efficiency by 25% and enabling better decision-making for marketing strategies.
+
+                **Programming Languages:**  
+                Proficient in Python, R, and SQL for data manipulation and analysis. Supported by certifications such as **IBM Data Science Essentials** and practical application in projects like the **Car Price Prediction Model** and **Flood Prediction Project**.
+
+                **Machine Learning:**  
+                Experience with developing, training, and deploying machine learning models. Demonstrated in the **Ad Scoring Model** project, which contributed to a 50% increase in revenue, and achieved a **Top 28%** ranking in the **Binary Prediction Competition on Smoker Status**.
+
+                **Deep Learning:**  
+                Knowledge of neural networks and frameworks such as TensorFlow and PyTorch. Applied in the **Flood Prediction Project** using TensorFlow Keras, achieving an 84% accuracy rate in predicting flood occurrences.
+            """)
+
+        # Machine Learning & AI Solutions Architecture
+        with st.expander("🤖 Machine Learning & AI Solutions Architecture", expanded=False):
+            st.markdown("""
+                **AI System Design:**  
+                Capable of designing scalable AI and ML architectures tailored to business needs. Implemented in the **Unified Web Application Ecosystem with FastAPI and AWS**, integrating Streamlit and Shiny frontends for seamless user interaction.
+
+                **Model Deployment:**  
+                Expertise in deploying machine learning models into production environments. Successfully deployed the **Flood Prediction Model** and **Computer Vision Project** APIs using Docker and AWS ECS, ensuring high availability and fault tolerance.
+
+                **Algorithm Development:**  
+                Skilled in developing and optimizing algorithms for various applications. Enhanced predictive performance in the **Ad Scoring Model** and **Binary Prediction Competition** through advanced techniques like Weighted Ensemble methods and hyperparameter tuning with Optuna.
+
+                **Cloud Platforms:**  
+                Proficient with cloud services like AWS, Azure, and Google Cloud for AI/ML solutions. Managed data pipelines and deployments in projects such as the **ROAS Dashboard** and **Unified Web Application Ecosystem**, leveraging AWS services like EC2 and Azure Databricks.
+
+                **Automation:**  
+                Implementing automated workflows for continuous integration and deployment of AI solutions. Automated chart customization and report generation in the **In-House Data Processing Tool** using VBA Macros and Streamlit.
+            """)
+
+        # Data Engineering & Infrastructure
+        with st.expander("🛠️ Data Engineering & Infrastructure", expanded=False):
+            st.markdown("""
+                **ETL Processes:**  
+                Designing and managing scalable Extract, Transform, Load (ETL) pipelines. Led the creation of robust ETL pipelines in the **Ad Scoring Model** and **IVR Data Analysis Project**, ensuring efficient data flow and integrity.
+
+                **API Development:**  
+                Building and deploying robust APIs for data access and integration. Developed RESTful APIs using FastAPI for the **ROAS Dashboard** and **Unified Web Application Ecosystem**, facilitating seamless data interactions.
+
+                **Database Management:**  
+                Experience with SQL and NoSQL databases such as PostgreSQL and MongoDB. Managed large marketing datasets in the **Ad Scoring Model** project using MongoDB and optimized data storage solutions for high performance.
+
+                **Big Data Technologies:**  
+                Familiarity with Hadoop, Spark, and similar big data frameworks. Utilized Databricks for processing extensive datasets in the **IVR Data Analysis Project**, enhancing data processing capabilities.
+
+                **Scalability Solutions:**  
+                Ensuring data systems are scalable and maintain high performance under load. Achieved scalable deployments in the **Flood Prediction Project** and **ROAS Dashboard**, leveraging AWS ECS and EC2 for reliable infrastructure.
+            """)
+
+        # Business Intelligence & Strategy
+        with st.expander("📈 Business Intelligence & Strategy", expanded=False):
+            st.markdown("""
+                **Data Interpretation:**  
+                Translating complex data into actionable business insights. Led survey projects and developed dashboards in the **In-House Data Processing Tool**, enabling data-driven decision-making.
+
+                **Business Intelligence Tools:**  
+                Proficient in BI tools like Tableau, Power BI, and Looker. Created comprehensive visualizations in the **HR Analytics Project** and **ROAS Dashboard**, facilitating better business insights.
+
+                **Strategic Planning:**  
+                Developing data-driven strategies to support business objectives. Contributed to digital marketing strategies through the **Ad Scoring Model** and **Digital Marketing Campaign Ad Set EDA and Ad Scoring** projects, optimizing marketing spend and increasing revenue.
+
+                **Survey Design & Analysis:**  
+                Creating and analyzing surveys to gather actionable feedback and insights. Directed survey projects in the **Data Scientist** role at INVOKE Solutions, enhancing data accuracy by 20%.
+
+                **Digital Strategy Innovation:**  
+                Innovating digital strategies to enhance business processes and customer engagement. Developed tools like the **VBA Macro Generator for Charts Handling** and the **Unified Web Application Ecosystem**, improving operational efficiency and user experience.
+
+                **Data Storytelling:**  
+                Communicating data insights effectively to stakeholders through compelling narratives. Presented findings in the **HR Analytics Project** and **Live Calls Data Analysis Project**, driving strategic initiatives and improving customer satisfaction.
+            """)
+
+        # Additional Skills
+        with st.expander("🔧 Additional Skills", expanded=False):
+            st.markdown("""
+                **Project Management:**  
+                Managing data projects from inception to completion using methodologies like Agile and Scrum. Successfully led multiple projects, including the **Unified Web Application Ecosystem** and **Deployment Endpoints to AWS ECS and EC2**, ensuring timely delivery and high-quality outcomes.
+
+                **Collaboration & Communication:**  
+                Working effectively with cross-functional teams and communicating complex technical concepts to non-technical stakeholders. Coordinated with data scientists, backend developers, and marketing teams in projects like the **Ad Scoring Model** and **IVR Data Analysis Project**.
+
+                **Problem-Solving:**  
+                Strong analytical and problem-solving abilities to address data-related challenges. Resolved data processing bottlenecks in the **In-House Data Processing Tool** and optimized model performance in various machine learning competitions.
+
+                **Continuous Learning:**  
+                Staying updated with the latest trends and advancements in data science, AI, and technology. Earned certifications such as **Advanced LLM Certificate**, **Kaggle Python Programming**, and actively participated in competitions and hackathons like the **AI Tinkerers Hackathon**.
+            """)
+        
+        st.markdown("---")
+        
+        # Play Music Button
         new_tab_button = """
-        <a href="https://www.youtube.com/watch?v=VeUiVCb7ZmQ?si=GzSBUP3zs1hEkigI" target="_blank">
+        <a href="https://www.youtube.com/watch?v=VeUiVCb7ZmQ&si=GzSBUP3zs1hEkigI" target="_blank">
             <button style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; text-align: center; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 8px;">
                 🎵 Play Music while Reading
             </button>
@@ -179,3 +214,4 @@ def page_style():
         """
         st.markdown(new_tab_button, unsafe_allow_html=True)
 
+        st.markdown("---")

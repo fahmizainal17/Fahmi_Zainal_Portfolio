@@ -13,7 +13,7 @@ def show_education():
         {
             "institution": "University of Malaya",
             "logo": "photos/Education_Logo/University_of_Malaya_Logo.jpg",
-            "degree": "**Bachelor of Science in Physics**",  # Using Markdown for bold
+            "degree": "**Bachelor of Science in Physics**",
             "duration": "2019 - 2023",
             "location": "Kuala Lumpur, Malaysia",
             "description": """
@@ -25,7 +25,7 @@ def show_education():
         {
             "institution": "University of Malaya",
             "logo": "photos/Education_Logo/University_of_Malaya_Logo.jpg",
-            "degree": "**Foundation in Physical Sciences**",  # Using Markdown for bold
+            "degree": "**Foundation in Physical Sciences**",
             "duration": "2018 - 2019",
             "location": "Kuala Lumpur, Malaysia",
             "description": """

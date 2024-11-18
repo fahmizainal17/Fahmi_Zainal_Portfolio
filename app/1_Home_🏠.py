@@ -14,6 +14,11 @@ def show():
         Meet Fahmi Zainal, a visionary in the world of data science, where numbers transform into strategies and insights become growth. As a Senior Data Scientist, Fahmi brings nearly two years of specialized experience in turning raw data into game-changing business outcomes, with a unique blend of skills in Python, SQL, machine learning, and PowerBI.
 
         Fahmi's passion lies in crafting intelligent solutions that make data not just powerful, but irresistible. He has led high-impact projects that didn't just improve data efficiency—they revolutionized it, driving revenue leaps from thousands to six-figure success stories through predictive analytics, digital marketing, and market research.
+        """)
+
+        st.markdown("---")
+        
+        st.markdown("""
 
         At INVOKE Solutions, Fahmi doesn't just build tools; he redefines possibilities. His work in survey automation slashes manual efforts to a fraction, architecting sophisticated data ecosystems that fuel faster, smarter decisions. With a flair for guiding teams and mentoring the next generation of data wizards, Fahmi thrives on collaboration, innovation, and the relentless pursuit of excellence.
 
@@ -25,10 +30,11 @@ def show():
     with c2:
         # Video Player
         st.markdown("## Video")
-        url =  "https://youtu.be/vC7m-u0-qXg?si=yII1DzWfcf9qB8-9"
-        st_player(url)
+        # Remove 'caption' and 'use_column_width' arguments
+        st_player("https://youtu.be/vC7m-u0-qXg?si=yII1DzWfcf9qB8-9")
+        # Add caption separately
+        st.caption("His Introductory Speech")
+        st.markdown("[View on YouTube](https://youtu.be/vC7m-u0-qXg?si=yII1DzWfcf9qB8-9)")
 
 if __name__ == "__main__":
     show()
-
-# Future fb###
