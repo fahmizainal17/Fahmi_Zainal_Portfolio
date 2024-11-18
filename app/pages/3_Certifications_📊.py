@@ -15,9 +15,7 @@ def show_certifications():
             "Kaggle Machine Learning",
             "Kaggle Python Programming",
             "IBM Data Science Essentials",
-            "IBM Data Visualization and Dashboards with Excel & Cognos Analytics",
-            "Introduction to Data Analytics",
-            "Advanced LLM Certificate"
+            "Advanced LLM Certificate",
         ],
         "Data Engineering": [
             "Coursera Project Certificate - Working With Big Query"
@@ -27,7 +25,9 @@ def show_certifications():
             "IBM Excel Essentials for Data Analytics",
             "MBOT HRDC OGM Microsoft Power BI for Oil and Gas Module 1",
             "MBOT HRDC OGM Microsoft Power BI for Oil and Gas Module 2",
-            "MBOT HRDC Advanced Excel for Oil and Gas Module 3"
+            "MBOT HRDC Advanced Excel for Oil and Gas Module 3",
+            "IBM Data Visualization and Dashboards with Excel & Cognos Analytics",
+            "Introduction to Data Analytics",
         ],
         "Project Management": [
             "HRDC Microsoft Project",
@@ -92,8 +92,6 @@ def show_certifications():
         {"title": "Kaggle Machine Learning", "date": "October 2024", "image": "photos/Certifications/Machine_Learning_Certificate.jpeg", "organization": "Kaggle", "details_link": "https://www.kaggle.com/learn/certification/fahmizainal/intro-to-machine-learning"},
         {"title": "Kaggle Python Programming", "date": "November 2023", "image": "photos/Certifications/Kaggle_Python.jpeg", "organization": "Kaggle", "details_link": "https://www.kaggle.com/learn/certification/fahmizainal/python"},
         {"title": "IBM Data Science Essentials", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Science_Essential.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/V6SSW27VS2QP"},
-        {"title": "IBM Data Visualization and Dashboards with Excel & Cognos Analytics", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Visualization_and_Dashboarding.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/ERMW3M5VFLQK"},
-        {"title": "Introduction to Data Analytics", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Analytics_Essential.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/QXZ672AWA9VX"},
         # Data Engineering Certifications
         {"title": "Coursera Project Certificate - Working With Big Query", "date": "November 2023", "image": "photos/Certifications/Big_Query.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/NESXX5PWWJ4W"},
         # Data Analytics Certifications
@@ -102,6 +100,8 @@ def show_certifications():
         {"title": "MBOT HRDC OGM Microsoft Power BI for Oil and Gas Module 1", "date": "July 2024", "image": "photos/Certifications/Power_BI_Volume_1.jpeg", "organization": "Malaysia Board of Technologists", "details_link": "https://oilandgasmeta.com/contact/"},
         {"title": "MBOT HRDC OGM Microsoft Power BI for Oil and Gas Module 2", "date": "July 2024", "image": "photos/Certifications/Power_BI_Volume_2.jpeg", "organization": "Malaysia Board of Technologists", "details_link": "https://oilandgasmeta.com/contact/"},
         {"title": "MBOT HRDC Advanced Excel for Oil and Gas Module 3", "date": "July 2024", "image": "photos/Certifications/Advanced_Excel_Module_3.jpeg", "organization": "Malaysia Board of Technologists", "details_link": "https://oilandgasmeta.com/contact/"},
+        {"title": "IBM Data Visualization and Dashboards with Excel & Cognos Analytics", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Visualization_and_Dashboarding.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/ERMW3M5VFLQK"},
+        {"title": "Introduction to Data Analytics", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Analytics_Essential.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/QXZ672AWA9VX"},
         # Project Management Certifications
         {"title": "HRDC Microsoft Project", "date": "August 2024", "image": "photos/Certifications/Microsoft_Project.jpeg", "organization": "HRD Corp - Human Resource Development Corporation", "details_link": "https://oilandgasmeta.com/contact/"},
         {"title": "MBOT HRDC Primavera P6 Module 1", "date": "August 2024", "image": "photos/Certifications/Primavera_P6_Volume_1.jpeg", "organization": "Malaysia Board of Technologists", "details_link": "https://oilandgasmeta.com/contact/"},
