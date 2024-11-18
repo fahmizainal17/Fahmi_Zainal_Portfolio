@@ -12,6 +12,7 @@ def show_certifications():
     # Define certification categories and icons
     categories = {
         "Data Science": [
+            "Kaggle Machine Learning",
             "Kaggle Python Programming",
             "IBM Data Science Essentials",
             "IBM Data Visualization and Dashboards with Excel & Cognos Analytics",
@@ -88,6 +89,7 @@ def show_certifications():
     certifications = [
         # Data Science Certifications
         {"title": "Advanced LLM Certificate", "date": "November 2024", "image": "photos/Certifications/Advanced_LLM_Certicate.png", "organization": "Ever AI Technologies", "details_link": "https://www.ever-technologies.com/contact/"},
+        {"title": "Kaggle Machine Learning", "date": "October 2024", "image": "photos/Certifications/Machine_Learning_Certificate.jpeg", "organization": "Kaggle", "details_link": "https://www.kaggle.com/learn/certification/fahmizainal/intro-to-machine-learning"},
         {"title": "Kaggle Python Programming", "date": "November 2023", "image": "photos/Certifications/Kaggle_Python.jpeg", "organization": "Kaggle", "details_link": "https://www.kaggle.com/learn/certification/fahmizainal/python"},
         {"title": "IBM Data Science Essentials", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Science_Essential.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/V6SSW27VS2QP"},
         {"title": "IBM Data Visualization and Dashboards with Excel & Cognos Analytics", "date": "June 2023", "image": "photos/Certifications/IBM_Data_Visualization_and_Dashboarding.png", "organization": "Coursera", "details_link": "https://www.coursera.org/account/accomplishments/certificate/ERMW3M5VFLQK"},
