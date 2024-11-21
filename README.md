@@ -1,80 +1,65 @@
-# **📊 Fahmi Zainal Portfolio Website 📊**
+# **📊 Fahmi Zainal Portfolio Website** [![wakatime](https://wakatime.com/badge/user/ae82a943-125e-489a-a656-e35fe84d587b/project/81353421-ab92-4d3f-abcc-80983a383efa.svg)](https://wakatime.com/badge/user/ae82a943-125e-489a-a656-e35fe84d587b/project/81353421-ab92-4d3f-abcc-80983a383efa)
 
 <!-- Badge to Visit My Portfolio -->
 <div align="center"> 
     <a href="https://fahmizainal-portfolio.streamlit.app/">
-        <img src="https://img.shields.io/badge/Visit%20My%20Portfolio-Streamlit%20App-brightgreen?style=for-the-badge&logo=streamlit" alt="Visit My Portfolio"/>
-    </a>
-</div>
-
-<div align="center">
-    <!-- Image as a link -->
-    <a href="https://img.shields.io/badge/Visit%20My%20Portfolio-Streamlit%20App-brightgreen?style=for-the-badge&logo=streamlit">
-        <img src="assets/Home_Page_Portfolio.png" alt="Home Page Portfolio" style="max-width:100%;">
+        <img src="https://img.shields.io/badge/Visit%20My%20Portfolio-brightgreen?style=for-the-badge&logo=streamlit" alt="Visit My Portfolio"/>
     </a>
 </div>
 
 ---
 
 ## **📋 Overview**
-The **Fahmi Zainal Portfolio Website** is a personal web application designed to showcase my professional experience, achievements, certifications, projects, and educational background. Built using Streamlit, this website serves as an interactive platform to highlight my journey and expertise in data science, software development, and more.
+
+The **Fahmi Zainal Portfolio Website** is a personal web application built using Streamlit. This platform highlights my professional achievements, certifications, projects, work experience, and educational background. It provides a dynamic and visually engaging experience for visitors to explore my career journey and expertise in fields such as data science, software development, and beyond.
 
 ---
 
 ## **Table of Contents**
 
-1. [🎯 Objectives](#-objectives)
-2. [🔧 Technologies Used](#-technologies-used)
-3. [🗂️ Directory Structure](#-directory-structure)
-4. [📁 Pages and Components](#-pages-and-components)
-5. [📊 Visual Elements](#-visual-elements)
-6. [🔄 Project Workflow](#-project-workflow)
-7. [🎉 Conclusion](#-conclusion)
-8. [🔮 Future Enhancements](#-future-enhancements)
-9. [📚 References](#-references)
-10. [📜 License](#-license)
+1. [🎯 Objectives](#-objectives)  
+2. [🔧 Technologies Used](#-technologies-used)  
+3. [🗂️ Directory Structure](#-directory-structure)  
+4. [📁 Key Features](#-key-features)  
+5. [🔄 Project Workflow](#-project-workflow)  
+6. [🎉 Conclusion](#-conclusion)  
+7. [🔮 Future Enhancements](#-future-enhancements)  
+8. [📜 License](#-license)  
 
 ---
 
 ## **🎯 Objectives**
 
-- **🌍 Create an engaging and professional portfolio website** to showcase my skills, experience, and achievements.
-- **📚 Organize content effectively** with a clear structure and user-friendly navigation.
-- **💻 Develop interactive features** using Streamlit components to allow visitors to explore my work dynamically.
-- **🔗 Provide downloadable resources** such as CV, project files, and additional materials.
+- **🌍 Showcase my expertise** in data science, machine learning, and related fields.  
+- **📚 Present my work effectively** through organized and interactive web pages.  
+- **💻 Provide downloadable resources** for visitors, such as CVs, certificates, and project details.  
+- **🔗 Offer a centralized hub** for professional connections and feedback.  
 
 ---
 
 ## **🔧 Technologies Used**
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Streamlit](https://img.shields.io/badge/Streamlit-%23FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)  
+![Streamlit](https://img.shields.io/badge/Streamlit-%23FF4B4B.svg?style=for-the-badge&logo=Streamlit&logoColor=white)  
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+
+Additional Tools:  
+- **Pandas**: Data handling and processing.  
+- **Matplotlib**: Visualization of project achievements and analytics.  
 
 ---
 
 ## **🗂️ Directory Structure**
 
-The project structure is as follows:
-
 ```plaintext
 .
-├── Dockerfile
-├── License
-├── README.md
+├── Dockerfile                  # Container setup for deployment
+├── License                     # Licensing information
+├── README.md                   # Project documentation
 ├── app
-│   ├── 1_Home_🏠.py
-│   ├── component.py
-│   ├── modules
-│   │   ├── Achievements
-│   │   ├── Certification
-│   │   ├── Education
-│   │   ├── Feedback_Discussion
-│   │   ├── Introduction
-│   │   ├── Jobs
-│   │   ├── Materials
-│   │   └── Projects
-│   └── pages
+│   ├── 1_Home_🏠.py             # Homepage script
+│   ├── component.py            # Shared UI components
+│   └── pages                   # Individual pages
 │       ├── 2_Achievements_🏆.py
 │       ├── 3_Certifications_📊.py
 │       ├── 4_Projects_💼.py
@@ -83,82 +68,85 @@ The project structure is as follows:
 │       ├── 7_Materials_📚.py
 │       └── 8_Feedback_and_Discussion_💬.py
 ├── assets
-│   ├── background_sidebar.jpg
-│   ├── background_video_bird-ezgif.com-optimize.gif
-│   └── tile.gif
+│   ├── background_sidebar.jpg  # Sidebar background image
+│   ├── Home_Page_Portfolio.png # Homepage preview image
+│   └── tile.gif                # Animated tile GIF
 ├── photos
-│   ├── Achievements
-│   ├── Certifications
-│   ├── Education_Logo
-│   ├── Experience_Company_Logo
-│   ├── My_Photo
-│   └── Projects
-└── requirements.txt
+│   ├── Achievements            # Images related to achievements
+│   ├── Certifications          # Images of certifications
+│   ├── Experience_Company_Logo # Company logos from experience
+│   ├── My_Photo                # Profile photos
+│   └── Projects                # Screenshots of projects
+└── requirements.txt            # Project dependencies
 ```
 
 ---
 
-## **📁 Pages and Components**
+## **📁 Key Features**
 
-- **🏠 Home:** Introduction and personal background.
-- **🏆 Achievements:** Highlights of my professional and personal accomplishments.
-- **📊 Certifications:** Details of certifications and courses completed.
-- **💼 Projects:** Showcases my key projects with descriptions, images, and links to repositories.
-- **💻 Experience:** A summary of my work experience and roles.
-- **🎓 Education:** Educational background and academic achievements.
-- **📚 Materials:** Resources and documents available for download.
-- **💬 Feedback and Discussion:** A form for visitors to leave feedback or engage in discussions.
+### 1. **🏠 Home Page**
+- Introduction and personal background.  
+- Links to key sections of the portfolio.
 
----
+### 2. **🏆 Achievements Page**
+- Highlights of professional and personal accomplishments.  
+- Visual representation of achievements with supporting images.
 
-## **📊 Visual Elements**
+### 3. **📊 Certifications Page**
+- A comprehensive list of certifications with visual previews.  
+- Organized categorically for easy navigation.
 
-This portfolio website incorporates various visual elements:
-- **Backgrounds:** Custom images for the sidebar and backgrounds.
-- **Photos and Logos:** Images related to achievements, certifications, education, experience, and projects.
-- **Interactive GIFs:** Animated elements to make the website visually engaging.
+### 4. **💼 Projects Page**
+- Detailed descriptions of my projects, including key contributions, tools, and results.  
+- Images and links to project repositories or live demos.
+
+### 5. **💻 Experience Page**
+- Overview of work experience, roles, and responsibilities.  
+- Logos of companies where I’ve worked.
+
+### 6. **🎓 Education Page**
+- Academic background and achievements.  
+- University affiliations and coursework highlights.
+
+### 7. **📚 Materials Page**
+- Resources for visitors to download, such as CVs, presentations, and project reports.
+
+### 8. **💬 Feedback and Discussion**
+- A form for visitors to leave feedback or ask questions.  
+- Dynamic engagement with viewers.  
 
 ---
 
 ## **🔄 Project Workflow**
 
-1. **📂 Setting up the Environment:**
-   - Initialize a virtual environment and install dependencies using `requirements.txt`.
-   - Use Docker to containerize the application for easy deployment.
+1. **📂 Environment Setup**:
+   - Install dependencies using `requirements.txt`.  
+   - Use Docker for containerized deployment.  
 
-2. **🧩 Developing the Pages:**
-   - Create individual Python scripts for each page using Streamlit components.
-   - Integrate navigation and ensure smooth transitions between pages.
+2. **🔍 Content Organization**:
+   - Structure content into dedicated pages for streamlined navigation.  
+   - Add supporting visuals like certificates, project screenshots, and logos.  
 
-3. **🔍 Adding Content and Visuals:**
-   - Populate each page with content, images, and interactive elements.
-   - Optimize images and GIFs for performance.
+3. **🧩 Development**:
+   - Build interactive pages using Streamlit components.  
+   - Optimize for user experience with responsive design elements.  
 
-4. **🚀 Deploying the Website:**
-   - Deploy the website using Streamlit sharing or Docker for cloud deployment.
-   - Set up CI/CD pipelines for automated updates and maintenance.
+4. **🚀 Deployment**:
+   - Host the portfolio on [Streamlit Cloud](https://streamlit.io/cloud) or deploy via Docker on a personal server.  
 
 ---
 
 ## **🎉 Conclusion**
 
-This portfolio website serves as a comprehensive showcase of my professional journey, skills, and projects. It is designed to provide an interactive and engaging experience for visitors, allowing them to explore my work and connect with me easily.
+The **Fahmi Zainal Portfolio Website** is a one-stop platform for showcasing my expertise, achievements, and projects. It combines professionalism with interactivity, providing an engaging way for visitors to learn more about me and my work.
 
 ---
 
 ## **🔮 Future Enhancements**
 
-- **🌐 Multilingual Support:** Add support for multiple languages to reach a wider audience.
-- **🔧 Enhanced Interactivity:** Implement more interactive elements, such as charts and filters for dynamic content viewing.
-- **💾 Database Integration:** Store feedback and visitor data for further analysis and engagement.
-
----
-
-## **📚 References**
-
-- [Streamlit Documentation](https://docs.streamlit.io/)
-- [Docker Documentation](https://docs.docker.com/)
-- [Python Documentation](https://docs.python.org/3/)
+- **🌐 Multilingual Support**: Add language options to cater to diverse audiences.  
+- **📊 Data Visualizations**: Include dynamic visualizations for achievements and project metrics.  
+- **🔗 External Integrations**: Link to GitHub, LinkedIn, and other professional profiles.  
 
 ---
 
@@ -166,11 +154,6 @@ This portfolio website serves as a comprehensive showcase of my professional jou
 
 **Fahmi Zainal Custom License**
 
-All rights reserved. This project is the intellectual property of Fahmi Zainal. Unauthorized copying, use, or distribution of any code, content, or material from this project is strictly prohibited.
+All rights reserved. Unauthorized copying, use, or distribution of this project or its components is strictly prohibited. Contact me for permissions or inquiries.
 
-You may not:
-- Copy, reproduce, or distribute any part of this code or project.
-- Use the code or content for any purpose, commercial or otherwise, without prior written consent from Fahmi Zainal.
-- Modify, decompile, or reverse-engineer any portion of this codebase.
-
-By using or accessing any part of this project, you agree to be bound by the terms of this license.
+---
