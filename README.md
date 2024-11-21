@@ -7,6 +7,14 @@
     </a>
 </div>
 
+<!-- Badge to Visit My Portfolio -->
+<div align="center">
+    <!-- Image as a link -->
+    <a href="https://img.shields.io/badge/Visit%20My%20Portfolio-Streamlit%20App-brightgreen?style=for-the-badge&logo=streamlit">
+        <img src="assets/Home_Page_Portfolio.png" alt="Home Page Portfolio" style="max-width:100%;">
+    </a>
+</div>
+
 ---
 
 ## **📋 Overview**
